@@ -15,7 +15,11 @@ export async function getSigner() {
     transport: custom(window.ethereum),
   });
   const [address] = await walletClient.requestAddresses();
-
+  try {
+    await walletClient.switchChain({ id: sepolia.id });
+  } catch (error) {
+    throw new Error("Your wallet is not connected to the Sepolia network.");
+  }
   return createWalletClient({
     account: address as Hex,
     chain: sepolia,

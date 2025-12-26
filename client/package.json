@@ -12,6 +12,7 @@
     "@botanary/ecdsa-validator": "^1.0.0",
     "@botanary/permissions": "^1.0.0",
     "@botanary/sdk": "^1.0.0",
+    "lucide-react": "^0.562.0",
     "next": "16.1.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
